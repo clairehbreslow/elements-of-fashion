@@ -44,10 +44,14 @@ export function ElementGallery({ elements, sitePrefix }: ElementGalleryProps) {
                 loading={index < 6 ? 'eager' : 'lazy'}
                 decoding="async"
               />
-              <span className="open-cue" aria-hidden="true">View profile +</span>
+              <span className="open-cue" aria-hidden="true">
+                View profile +
+              </span>
             </div>
             <div className="look-caption">
-              <span className="element-number">{String(element.number).padStart(2, '0')}</span>
+              <span className="element-number">
+                {String(element.number).padStart(2, '0')}
+              </span>
               <span className="element-symbol">{element.symbol}</span>
               <span className="element-meta">
                 <strong>{element.name}</strong>
@@ -66,7 +70,8 @@ export function ElementGallery({ elements, sitePrefix }: ElementGalleryProps) {
               alt={`Fashion illustration inspired by ${selected.name}`}
             />
             <span className="profile-look-number">
-              Look {String(selectedIndex + 1).padStart(2, '0')} / {elements.length}
+              Look {String(selectedIndex + 1).padStart(2, '0')} /{' '}
+              {elements.length}
             </span>
           </div>
 
@@ -110,8 +115,13 @@ export function ElementGallery({ elements, sitePrefix }: ElementGalleryProps) {
               </div>
             </dl>
 
+            <div className="profile-description">
+              <span>Fashion notes</span>
+              <p>{selected.description}</p>
+            </div>
+
             <div className="profile-fact">
-              <span>Did you know?</span>
+              <span>Element fact</span>
               <p>{selected.fact}</p>
             </div>
 

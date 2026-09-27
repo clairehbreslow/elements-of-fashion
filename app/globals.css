@@ -67,7 +67,10 @@ a {
   place-items: center;
   background: var(--ink);
   color: var(--acid);
-  font: 800 1.4rem/1 Arial, Helvetica, sans-serif;
+  font:
+    800 1.4rem/1 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .collection-jump {
@@ -194,7 +197,10 @@ h1 span {
   flex: 0 0 auto;
   place-items: center;
   border-right: 1px solid #4a4a4a;
-  font: 700 1rem/1 Georgia, 'Times New Roman', serif;
+  font:
+    700 1rem/1 Georgia,
+    'Times New Roman',
+    serif;
 }
 
 .collection {
@@ -278,7 +284,9 @@ h1 span {
   opacity: 0;
   text-transform: uppercase;
   transform: translateY(100%);
-  transition: opacity 220ms ease, transform 220ms ease;
+  transition:
+    opacity 220ms ease,
+    transform 220ms ease;
 }
 
 .look-card:hover .look-image img,
@@ -496,6 +504,7 @@ h1 span {
 }
 
 .profile-stats dt,
+.profile-description > span,
 .profile-fact > span {
   margin-bottom: 0.3rem;
   font-size: 0.68rem;
@@ -511,14 +520,30 @@ h1 span {
   font-weight: 700;
 }
 
-.profile-fact {
-  margin-top: auto;
-  padding-top: clamp(1.5rem, 3vw, 2.5rem);
+.profile-description {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border: 2px solid var(--line);
+  background: rgb(255 255 255 / 38%);
 }
 
+.profile-description > span,
 .profile-fact > span {
   display: block;
   color: var(--signal);
+}
+
+.profile-description p {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1rem, 1.6vw, 1.12rem);
+  line-height: 1.55;
+}
+
+.profile-fact {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 2px solid var(--line);
 }
 
 .profile-fact p {
