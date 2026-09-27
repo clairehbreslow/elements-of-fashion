@@ -1,7 +1,9 @@
 import { ElementGallery } from './element-gallery';
 import { elements } from './elements';
+import { SiteInfo } from './site-info';
 
-const sitePrefix = process.env.NODE_ENV === 'production' ? '/elements-of-fashion' : '';
+const sitePrefix =
+  process.env.NODE_ENV === 'production' ? '/elements-of-fashion' : '';
 
 export const dynamic = 'force-static';
 
@@ -9,7 +11,11 @@ export default function Home() {
   return (
     <main>
       <header className="site-header">
-        <a className="wordmark" href={`${sitePrefix}/`} aria-label="Elements of Fashion home">
+        <a
+          className="wordmark"
+          href={`${sitePrefix}/`}
+          aria-label="Elements of Fashion home"
+        >
           <span className="wordmark-tile">E</span>
           <span>Elements of Fashion</span>
         </a>
@@ -20,6 +26,7 @@ export default function Home() {
 
       <section className="masthead" aria-labelledby="page-title">
         <div className="masthead-copy">
+          <SiteInfo />
           <p className="eyebrow">The illustrated periodic collection</p>
           <h1 id="page-title">
             Elements
@@ -46,13 +53,20 @@ export default function Home() {
         </div>
       </div>
 
-      <section className="collection" id="collection" aria-labelledby="collection-title">
+      <section
+        className="collection"
+        id="collection"
+        aria-labelledby="collection-title"
+      >
         <div className="section-heading">
           <div>
             <p className="eyebrow">Atomic number 01—88</p>
             <h2 id="collection-title">The collection</h2>
           </div>
-          <p>Presented in atomic order. Select a look to explore the element behind it.</p>
+          <p>
+            Presented in atomic order. Select a look to explore the element
+            behind it.
+          </p>
         </div>
 
         <ElementGallery elements={elements} sitePrefix={sitePrefix} />
