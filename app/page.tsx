@@ -60,7 +60,6 @@ export default function Home() {
       >
         <div className="section-heading">
           <div>
-            <p className="eyebrow">Atomic number 01—88</p>
             <h2 id="collection-title">The collection</h2>
           </div>
           <p>
